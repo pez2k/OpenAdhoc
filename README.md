@@ -110,6 +110,9 @@ This repository contains compilable game scripts re-created from originally comp
 
 </details>
 
+### GT PSP Completion Progress
+All projects and scripts re-created. Adhoc code is identical for all regions and revisions.
+
 ### GT4(O) Completion Progress
 <details>
 
