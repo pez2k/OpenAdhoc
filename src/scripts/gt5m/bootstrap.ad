@@ -16,7 +16,7 @@
 
 
 
-static module main
+module ::main
 {
     static PROJECT_ROOT_DIR;
     static MGOM;
@@ -94,9 +94,9 @@ static module main
     function isEnvironmentLocal()
     {
         if (is_environment_local != -1)
+        {
             return is_environment_local;
-
-
+        }
         else if ((main::AppOpt.defined("fsroot") && main::AppOpt["fsroot"].find("mtarget") >= 0) || 
                  main::pdiext::MProductInformation::GetVersionEnvironment().beginsWith("local"))
         {
@@ -195,13 +195,13 @@ function initMenuSystem()
 
 
         default:
-            main::PROJECT_ROOT_DIR = "projects/gt5";
+            main::PROJECT_ROOT_DIR = "projects/gt5m";
             product_dir = "gt5m";
             break;
     }
 
 
-    module main {
+    module ::main {
         require "/products/%{product_dir}/script/MenuClassDefine";
     }
 
